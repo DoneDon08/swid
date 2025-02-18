@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"  href="logoicow.ico">
+    <title>Swidor</title>
+    </head>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background: #f5deb3b6;
+            /*background-image: linear-gradient(rgb(0, 85, 255),rgb(1, 0, 85));*/
+            height:100vh;
+            overflow-x: hidden;
+        }
+        body::-webkit-scrollbar{
+            display: none;
+        }
+        /*Header*/
+        .logo{
+            display:inline-block;
+            position:sticky;
+            margin-left: auto;
+            margin-right: auto;
+            width:10rem;
+            min-width: 8%;
+        }
+        .logo a{
+            text-decoration: none;
+        }
+        .arrow{
+            max-width: 10%;
+            min-width:3%
+        }
+        .mtitle{
+            display: block;
+            text-align: left;
+            color:black;
+            font-size: 0.9rem;
+        }
+        nav ul{
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding:0;
+            justify-content: space-around;
+        }
+        nav a{
+            display: inline-block;
+            padding: 1em;
+            color:black;
+            font-size: 1.3rem;
+            border-style: solid;
+            border-width: 2px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.211);
+            background-color: #f5deb3b6;
+            font-weight: 400;
+            border-color: black;
+            text-decoration: none;
+        }
+        nav a:hover,
+        nav a:focus{
+            color:black;
+            text-decoration: underline;
+            font-size: larger;
+        }
+        nav{
+            border-style: solid;
+            border-width:0 0 3px 0;
+            border-color: black;
+            padding:0 0 1em;
+        }   
+        header{
+            padding: 0em 0 2em;
+        }
+
+        .hdl{
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        .introduction{
+            
+            text-align: left;
+            border-style: none;
+            border-radius: 10px;
+            border-width: 3px;
+            padding:1em;
+            color: rgb(0, 0, 0);
+            border-radius: 0;
+                border-right-style: solid;
+                border-right-width: 10px;
+                border-right-color: rgb(255, 166, 0);
+                background:linear-gradient(-90deg, rgb(252, 216, 149),wheat);
+        }
+        .profile1header{
+            text-align: center;
+            font-size: 2.4rem;
+        }
+        .story{
+            margin-top: 5%;
+            padding:1em;
+            text-align:left;
+            border-radius: 0;
+                border-left-style: solid;
+                border-left-width: 10px;
+                border-left-color: rgb(255, 166, 0);
+                background:linear-gradient(90deg, rgb(252, 216, 149),wheat);
+        }
+        .profile1{
+            background-color: rgba(0, 200, 255, 0.192);
+            margin-left: auto;
+            margin-right: auto;
+            border-style:outset;
+            border-width: 5px;
+            border-color: rgb(255, 166, 0);
+            border-radius: 10px;
+            padding:1em;
+        }
+        .profile1name{
+            font-size: 1.7em;
+            text-align: center;
+        }
+        .profile1pic{
+            margin-left: auto;
+            margin-right: auto;
+            width: 96%;
+            border-radius: 1000px;
+        }
+        .profile1text{
+            text-align: left;
+            font-size: 1.1rem;
+        }
+        .profile2header{
+            text-align: center;
+            font-size: 2rem;
+        }
+        .profile2{
+            margin-top: 3%;
+            background-color: rgba(0, 200, 255, 0.192);
+            margin-left: auto;
+            margin-right: auto;
+            border-style:outset;
+            border-width: 5px;
+            border-color: rgb(255, 166, 0);
+            border-radius: 10px;
+            padding:1em;
+        }
+        .profile2name{
+            text-align: center;
+            font-size: 1.7rem;
+        }
+        .profile2pic{
+            margin-left: auto;
+            margin-right: auto;
+            width: 96%;
+            border-radius: 1000px;
+        }
+
+        .mainname{
+            font-size: 0px;
+            display: none;
+        }
+       .footerlist{
+        display: none;
+       }
+       .nl1 span{
+        display: none;
+        z-index: 2;
+       }
+       .footer2{
+        display:none;
+       }
+       .news2{
+        display: none;
+       }
+       .head2{
+        display: none;
+       }
+       .hdl2{
+        display: none;
+       }
+       .ongoing2{
+        display: none;
+       }
+        .head2{
+                display: none;
+            }
+        .storyimg{
+            display: none;
+        }
+        
+
+        @media screen and (min-width: 768px) {
+            .head2{
+                display: none;
+            }
+            .hdl2{display: none;}
+            .footer2{display: none;}
+            .news2{display: none;}
+            .ongoing2{display: none;}
+            .storyimg{
+                display: none;
+            }
+            .logo{
+                position: fixed;
+                top:-3%;
+                left:43.5%;
+                margin-left: auto;
+                margin-right: auto;
+                padding:3em 0 3em;
+            }
+            .arrow{
+                max-width: 6%;
+            }
+            .mainname{
+                display: block;
+                top:0%;
+                align-items: left;
+                font-size: 3rem;
+                text-transform: uppercase;
+                font-variant: small-caps;
+                position: fixed;
+                margin-left:3%;
+            }
+            nav{   
+                letter-spacing:50px;
+                padding:8em 0 1em;
+            }
+            nav a{
+                letter-spacing:1px;
+                font-size: 1.4rem;
+                font-style: oblique;
+            }
+
+
+
+            .profile1{
+                width: 49%;
+                float:left;
+                margin-top:0;
+            }
+            .profile2{
+                width:49%;
+                float:right;
+                margin-top:0;
+            }
+            .hdl{
+                font-size: 2rem;
+            }
+            .introduction{
+                font-size: 1.3rem;
+            }
+            .story{
+                font-size: 1.3rem;
+            }
+            .profile1text{
+                font-size: 1.3rem;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .storyimg{
+                display: none;
+            }
+            nav{
+                position: fixed;
+                padding:0 0 0;
+                text-align: right;
+                margin-left:62%;
+                margin-right: auto;
+                letter-spacing: 1px;
+                text-decoration: none;
+                border-bottom-width:0px;
+                z-index: 2;
+            }
+            .hdl{
+                padding: 2em 0 0;
+                font-size: 2.5rem;
+            }
+            .introduction{
+                margin-right:55%;
+                border-radius: 0;
+                border-right-style: solid;
+                border-right-width: 10px;
+                border-right-color: rgb(255, 166, 0);
+                background:linear-gradient(-90deg, rgb(252, 216, 149),wheat);
+
+            }
+            .story{
+                margin-top: 2%;
+                margin-left: 40%;
+                border-radius: 0;
+                border-left-style: solid;
+                border-left-width: 10px;
+                border-left-color: rgb(255, 166, 0);
+                background:linear-gradient(90deg, rgb(252, 216, 149),wheat);
+            }
+        }
+        @media screen and (min-width:1440px){
+            .head{
+                display: none;
+            }
+            .head2{
+                display: flow-root;
+                background-image: linear-gradient(135deg, rgba(216, 165, 102, .6), rgba(88, 56, 31, .6));
+                border-style: solid;
+                border-width: 0px;
+                top:0;
+                position: fixed;
+                height: 7rem;
+                width: 99%;
+                border-radius: 6px;
+                filter: blur(0px);
+                z-index:1;
+            }
+            .hlm{
+            text-decoration: none;
+            color: black;
+            font-size: clamp(0.1rem, 1.563rem, 3rem) ;
+            margin-top: 2%;
+            font-variant: small-caps;
+            text-transform: lowercase;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            transition: all .5s ease-in-out;
+            display: block;
+            background-color: transparent;
+            position: fixed;
+            font-size: 1.8rem;
+            top:0;      
+            z-index: 2;
+        }
+        .logo2{
+            text-decoration: none;
+            color: black;
+            margin-left:45%;
+            display: block;
+            width:12%;
+            margin-top:200%;
+            background: transparent;
+            transition:all 0.5s ease-in-out;
+            position: fixed;
+            top:0;
+            z-index: 7;
+        }
+        .mtitle{
+            text-decoration: none;
+            color: black;
+            margin-left: 1%;
+            font-size: clamp(1.3rem,2.813rem,5rem);
+            margin-top:1.5%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight:600;
+            text-transform:uppercase;
+            margin-right:95%;
+            transition: all .5s ease-in-out;
+            position: fixed;
+            top:0;  
+            z-index: 2;
+            font-size: 3.3rem;
+        }
+        .hlm:hover{
+            color:rgba(0, 0, 0, 0.205);
+            font-size: clamp(1rem, 1.68rem, 3rem);
+        }
+        .mtitle:hover{
+            color:rgb(183, 183, 183);
+            
+        }
+        .logo2:hover{
+            background: rgb(0, 0, 0);
+            width:12.5%;
+            
+        }
+        .hlm2{
+            color: black;
+            margin-left:18%;
+            margin-right: 55%;
+            font-size: clamp(1rem, 1.563rem, 4rem);
+            margin-top:1.3%;
+            /*margin-right:10%;*/
+            font-variant: small-caps;
+            text-transform: lowercase;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            transition: all .5s ease-in-out;
+            display: block;
+            background-color: transparent;
+            position: fixed;
+            top:0;      
+            text-decoration: underline;
+            z-index: 2;
+        }
+        .hlm2:hover{
+            color:rgb(183, 183, 183);
+        }  
+            .hlm:hover{
+                font-size:2rem;
+            }
+            .introduction{
+                font-size: 1.7rem;
+            }
+            .story{
+                font-size: 1.7rem;
+            }
+            .profile1header{
+                font-size: 4rem;
+            }
+            .profile1{
+                width: 30%;
+            }
+            .profile2{
+                margin-left: 2%;
+                width: 30%;
+                float:left;
+            }
+            
+        }
+        @media screen and (min-width:1920px){
+            .head2{
+                height: 9rem;
+            }
+            .hlm2{
+                font-size: 2rem;
+            }
+            .hlm{
+                font-size: 2rem;
+            }
+            .hlm:hover{
+                font-size: 2.4rem;
+            }
+            .mtitle{
+                font-size: 4rem;
+            }
+            .hdl{
+                padding:4em 0 0;
+            }
+            .introduction{
+                font-size: 1.9rem;
+            }
+            .story{
+                font-size: 1.9  rem;
+            }
+            .profile1name{
+                font-size: 2.7rem;
+            }
+            .profile1title{
+                font-size: 2.2rem;
+            }
+            .profile1text{
+                font-size: 1.6rem;
+            }
+
+            .profile2name{
+                font-size: 2.7rem;
+            }
+            .profile2title{
+                font-size: 2.2rem;
+            }
+            .profile2text{
+                font-size: 1.6rem;
+            }
+        }
+        @media screen and (min-width: 2560px) {
+            .logo2{
+            width: 9%;
+           }
+           .logo2:hover{
+            width: 9.5%;
+           }
+           .hlm:hover{
+            font-size:2.3rem;
+           }
+           .hlm2{
+            margin-top: 2%;
+           }
+        }
+    </style>
+    <body>
+        <header class="head">
+            <p class="upro"></p>
+            <p style="text-align: center;"><a href="./index.html">
+                <img src="logob.png" onmouseover="this.src='logoc2.png'" onmouseout="this.src='logob.png'" alt="Logo" class="logo">
+            </a></p>    
+            <a href="./index.html" style="text-decoration: none; color:black"><h1 class="mainname">Swidor</h1></a>
+            <a href="./newsletter.html" style="text-decoration: none; color:black"><h1 class="nl1"></h1></a>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./rprojects.html">Projects</a>
+                        <a href="./rnews.html">News</a>
+                        <a href="./aboutus.html">About us</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hdl">
+                <h1 class="hdlheader">About Us</h1>
+            </section>
+            <section class="introduction">
+                <h1 class="introductionheader">Who are we?</h1>
+                <p class="introductiontext">Founded on creativity and problem-solving, Swidor is driven by a passion for innovation. Our mission is to develop smarter solutions that improve everyday life.</p>
+            </section>
+
+            <section class="story">
+                <h1>Our short story</h1>
+                <p>Our journey began three years ago when I received second place in the Országos Tudományos és Innovációs Verseny (Hungarian Science and Innovation Contest) with a radio-communication-based hit machine for épée fencing. This competition quickly became a core point in my life, with my projects consistently ranking among the top 28.<br>
+
+                    In 2024, during a live demonstration of my heater project, I realized its potentail due to the feedbacks I received there. That moment marked the turning point—what started as a passion for innovation is now evolving into a real business. With the upcoming launch of our Kickstarter campaign, our official journey is just beginning.</p>
+                </section>
+                <img src="story.jpg" class="storyimg">    
+            <h1 class="profile1header">Our Team</h1>
+            <section class="profile1">
+                <img class="profile1pic" src="profile1.jpg">
+                <h1 class="profile1name">Donát Molnár</h1>
+                <h1 class="profile1title">Title: Founder, Project Manager</h1>
+                <p class="profile1text">Hi, I'm Donát Molnár, founder of Swidor. I'm a 17-year-old innovator from the heart of Europe, Hungary. My passion for creating electrical and radio-communication-based gadgets began when I was just 10 years old. Since then, I've been deeply immersed in developing gadgets for the market. Today, I also serve as the Project Manager at Swidor, where I lead the product development process, ensuring that each project aligns with our vision of innovation and quality.</p>
+            </section>
+
+            </section>
+            <section class="profile2">
+                <img class="profile2pic" src="profile2.jpg">
+                <h1 class="profile2name">Levente Molnár</h1>
+                <h1 class="profile2title">Title: Chief Executive Officer</h1>
+                <p class="profile2text"></p>
+            </section>
+
+            <section class="head2">
+                <p style="text-align: center;"><a href="./index.html" style="text-decoration: none;">
+                    <img src="logob.png" onmouseover="this.src='logoc2.png'" onmouseout="this.src='logob.png'" alt="Logo" class="logo2" style="margin-top: 0%;">
+                    </a></p>
+                    <!--<hr width="101%" color="black" align="center" size="5px" style="margin-top: 5%; position: fixed; top:0; margin-left:-1%;">-->
+                    <a href="./rprojects.html" style="text-decoration: none;"><h1 class="hlm" style="margin-left: 64.5%; margin-right: 30%;">Projects</h1></a>
+                    <a href="./rnews.html" style="text-decoration: none;"><h1 class="hlm" style="margin-left: 76.2%;margin-right: 10%;">News</h1></a>
+                    <a href="./raboutus.html" style="text-decoration: none;"><h1 class="hlm" style="margin-left: 85%;margin-right: 5%;text-align: center;">About us</h1></a>
+                    <a href="./index.html" style="text-decoration: none;"><h1 class="mtitle">SWIDOR</h1></a>
+                    <a href="./newsletter.html" style="text-decoration: none;"><h4 class="hlm2">Subscribe to our newsletter here</h4></a>
+            </section>
+        </main>
+    </body>
+</html>

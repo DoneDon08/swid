@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon"  href="logoicow.ico">
+        <title>Swidor</title>
+    </head>
+    <style>
+        body{
+            background: #f5deb3b6;
+            overflow-x: hidden;
+        }
+        body::-webkit-scrollbar{
+            display: none;
+        }
+        /*headline/menu*/
+        :root{
+            --x:45deg
+        }
+        .logo{
+            display:inline-block;
+            position:sticky;
+            margin-left: auto;
+            margin-right: auto;
+            width:10rem;
+            min-width: 8%;
+        }
+        .logo a{
+            text-decoration: none;
+        }
+        .arrow{
+            max-width: 10%;
+            min-width:3%
+        }
+        .mtitle{
+            display: block;
+            text-align: left;
+            color:black;
+            font-size: 0.9rem;
+        }
+        nav ul{
+            display: flex;
+            list-style: none;
+            font-style: oblique;
+            margin: 0;
+            padding:0;
+            justify-content: space-around;
+        }
+        nav a{
+            display: inline-block;
+            padding: 1em;
+            color:black;
+            text-decoration: none;
+            font-size: 1.3rem;
+            border-style: solid;
+            border-width: 2px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.211);
+            background-color: #f5deb3b6;
+            font-weight: 400;
+            border-color: black;
+        }
+        nav a:hover,
+        nav a:focus{
+            color:black;
+            text-decoration: underline;
+            font-size: larger;
+        }   
+        .mainname{
+            display: none;
+        }
+        nav{
+            border-width: 0 0 3px 0;
+            border-style: solid;
+            border-color: black;
+            padding:0 0 2em;
+        }
+        header{
+            padding: 0em 0 2em;
+        }
+        .subs{
+            text-align: center;
+        }
+        .p1{
+            font-size: 3rem;
+            font-style: oblique;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        .p2{
+            font-size: 2rem;
+        }
+        .inp{
+            width:80%;
+            height:30px;
+            z-index: 1;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.315);*/
+            border-color: white;
+            border-radius: 20px;
+            text-align: center;
+            transition: all .5s ease-in-out;
+        }
+        .bf1{
+            height:60px;
+            width:125px;
+            margin-top: 5%;
+            z-index: 1;
+            font-size:25px;
+            background-color: rgb(255, 217, 0);
+            border-color: gold;
+            /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.315);*/
+            letter-spacing: 2px;
+            border-radius: 50px;
+            transition: all .5s ease-in-out ;
+        }
+        .bf1:hover{
+            filter: brightness(1.2);
+            letter-spacing: 3px;
+        }
+        .inp:hover{
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.249);
+        }
+        .head2{display: none;}
+
+        @media screen and (min-width: 768px) {
+            .head2{display: none;}
+        nav{
+            letter-spacing: 50px;
+        }
+        nav a{
+            letter-spacing: 1px;
+        }
+            .subs{
+            text-align: center;
+        }
+        .mainname{
+            display: none;
+        }
+        .p1{
+            font-size: 3rem;
+            font-style: oblique;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        .p2{
+            font-size: 2rem;
+        }
+        .inp{
+            width:80%;
+            height:30px;
+            z-index: 1;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.315);*/
+            border-color: white;
+            border-radius: 20px;
+            text-align: center;
+            transition: all .5s ease-in-out;
+        }
+        .bf1{
+            height:60px;
+            width:125px;
+            margin-top: 5%;
+            z-index: 1;
+            font-size:25px;
+            background-color: rgb(255, 217, 0);
+            border-color: gold;
+            /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.315);*/
+            letter-spacing: 2px;
+            border-radius: 50px;
+            transition: all .5s ease-in-out ;
+        }
+        .bf1:hover{
+            filter: brightness(1.2);
+            letter-spacing: 3px;
+        }
+        .inp:hover{
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.249);
+        }
+        }
+
+        @media screen and (min-width:1024px){
+            .head2{display: none;}
+            nav{
+                position: fixed;
+                padding:0 0 0;
+                text-align: right;
+                margin-left:62%;
+                margin-right: auto;
+                letter-spacing: 1px;
+                text-decoration: none;
+                border-bottom-width:0px;
+                top: 5%;
+            }
+            nav a{
+                font-style: oblique;
+                text-decoration: none;
+            }
+            .nav{
+                text-decoration: dotted;
+            }
+        .mainname{
+            display: block;
+            top:0%;
+            align-items: left;
+            font-size: 3rem;
+            text-transform: uppercase;
+            font-variant: small-caps;
+            position: fixed;
+            margin-left:3%;
+        }
+        .p1{
+            font-size: 4rem;
+            font-style: oblique;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        .p2{
+            font-size: 2.4rem;
+        }
+        .p3:hover{
+            cursor: pointer;
+        }
+        .inp{
+            width:60%;
+            height:30px;
+            z-index: 1;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.315);*/
+            border-color: white;
+            border-radius: 20px;
+            text-align: center;
+            transition: all .5s ease-in-out;
+        }
+        .bf1{
+            height:60px;
+            width:125px;
+            margin-top: 3%;
+            z-index: 1;
+            font-size:25px;
+            background-color: rgb(255, 217, 0);
+            border-color: gold;
+            /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.315);*/
+            letter-spacing: 2px;
+            border-radius: 50px;
+            transition: all .5s ease-in-out ;
+        }
+        .bf1:hover{
+            filter: brightness(1.2);
+            letter-spacing: 3px;
+        }
+        .inp:hover{
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.249);
+        }
+        .p3{
+            font-size: 1.3rem;
+        }
+        }
+
+        @media screen and (min-width:1440px){
+            .head2{display: block;}
+            .head{display: none;}
+            .head{
+                display: none;
+            }
+            .head2{
+                display: flow-root;
+                background-image: linear-gradient(135deg, rgba(216, 165, 102, .6), rgba(88, 56, 31, .6));
+                border-style: solid;
+                border-width: 0px;
+                top:0;
+                position: fixed;
+                height: 7rem;
+                width: 99%;
+                border-radius: 6px;
+                filter: blur(0px);
+                z-index:1;
+            }
+            .hlm{
+            text-decoration: none;
+            color: black;
+            font-size: clamp(0.1rem, 1.563rem, 3rem) ;
+            margin-top: 2%;
+            font-variant: small-caps;
+            text-transform: lowercase;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            transition: all .5s ease-in-out;
+            display: block;
+            background-color: transparent;
+            position: fixed;
+            font-size: 1.8rem;
+            top:0;      
+            z-index: 2;
+        }
+        .logo2{
+            text-decoration: none;
+            color: black;
+            margin-left:45%;
+            display: block;
+            width:12%;
+            margin-top:200%;
+            background: transparent;
+            transition:all 0.5s ease-in-out;
+            position: fixed;
+            top:0;
+            z-index: 7;
+        }
+        .mtitle{
+            text-decoration: none;
+            color: black;
+            margin-left: 1%;
+            font-size: clamp(1.3rem,2.813rem,5rem);
+            margin-top:1.5%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight:600;
+            text-transform:uppercase;
+            margin-right:95%;
+            transition: all .5s ease-in-out;
+            position: fixed;
+            top:0;  
+            z-index: 2;
+            font-size: 3.3rem;
+        }
+        .hlm2{
+            display: none;
+        }
+        .hlm:hover{
+            color:rgba(0, 0, 0, 0.205);
+            font-size: clamp(1rem, 1.68rem, 3rem);
+        }
+        .mtitle:hover{
+            color:rgb(183, 183, 183);
+            
+        }
+        .logo2:hover{
+            background: rgb(0, 0, 0);
+            width:8.4%;
+            
+        }
+        .p1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-variant: small-caps;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color:black;
+            text-align: center;
+            font-size: 60px;
+            margin-top:10%;
+            font-weight: 600;
+            text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.315);
+        }
+        .p2{
+            font-family: Arial, Helvetica, sans-serif;
+            font-variant: small-caps;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color:black;
+            text-align: center;
+            font-size: 30px;
+            margin-top:-2%;
+            font-weight: 600;
+        }
+        .inp{
+            width:390px;
+            height:30px;
+            position: relative;
+            z-index: 1;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.315);*/
+            border-color: white;
+            border-radius: 20px;
+            text-align: center;
+            transition: all .5s ease-in-out;
+        }
+        .bf1{
+            height:60px;
+            width:125px;
+            position: relative;
+            z-index: 1;
+            font-size:25px;
+            background-color: rgb(255, 217, 0);
+            border-color: gold;
+            /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.315);*/
+            letter-spacing: 2px;
+            border-radius: 50px;
+            transition: all .5s ease-in-out ;
+        }
+        .bf1:hover{
+            filter: brightness(1.2);
+            letter-spacing: 3px;
+        }
+        .inp:hover{
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.249);
+        }
+        .p3{
+            font-family: Arial, Helvetica, sans-serif;
+            font-variant: small-caps;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 1px;
+            color:black;
+            font-size: 15px;
+            font-weight: 600;
+            display: block;
+            text-decoration: underline;
+        }
+        .p3:hover{
+            color:rgb(183, 183, 183);
+            cursor: pointer;
+        }}
+        @media screen and (min-width:1920px){
+            .head2{
+                height: 9rem;
+            }
+            .hlm2{
+                font-size: 2rem;
+            }
+            .hlm{
+                font-size: 2rem;
+            }
+            .hlm:hover{
+                font-size: 2.4rem;
+            }
+            .mtitle{
+                font-size: 4rem;
+            }
+            .logo2:hover{
+                width: 12.5%;
+            }
+            .p1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-variant: small-caps;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color:black;
+            text-align: center;
+            font-size: 5rem;
+            margin-top:10%;
+            font-weight: 600;
+            text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.315);
+        }
+        .p2{
+            font-family: Arial, Helvetica, sans-serif;
+            font-variant: small-caps;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color:black;
+            text-align: center;
+            font-size: 3rem;
+            margin-top:0%;
+            font-weight: 600;
+        }
+        .inp{
+            width:30%;
+            height:30px;
+            position: relative;
+            z-index: 1;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.315);*/
+            border-color: white;
+            border-radius: 20px;
+            text-align: center;
+            transition: all .5s ease-in-out;
+        }
+        .bf1{
+            height:60px;
+            width:10%;
+            position: relative;
+            z-index: 1;
+            font-size:2rem;
+            background-color: rgb(255, 217, 0);
+            margin-top: 1%;
+            border-color: gold;
+            /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.315);*/
+            letter-spacing: 2px;
+            border-radius: 50px;
+            transition: all .5s ease-in-out ;
+        }
+        }
+        @media screen and (min-width: 2560px){
+            .head2{display: block;}
+            .head{display: none;}
+
+            .logo2{
+            width: 9%;
+           }
+           .logo2:hover{
+            width: 9.5%;
+           }
+           .hlm:hover{
+            font-size:2.3rem;
+           }
+           .hlm2{
+            margin-top: 2%;
+           }
+        .hlm:hover{
+            color:rgba(0, 0, 0, 0.205);
+            font-size: 2.3rem;
+        }
+        .mtitle:hover{
+            color:rgb(183, 183, 183);
+            
+        }
+        .logo2:hover{
+            background: rgb(0, 0, 0);
+            width:8.4%;
+            
+        }
+        .p1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-variant: small-caps;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color:black;
+            text-align: center;
+            font-size: 6rem;
+            margin-top:10%;
+            font-weight: 600;
+            text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.315);
+        }
+        .p2{
+            font-family: Arial, Helvetica, sans-serif;
+            font-variant: small-caps;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color:black;
+            text-align: center;
+            font-size: 3rem;
+            margin-top:0%;
+            font-weight: 600;
+        }
+        .inp{
+            width:30%;
+            height:30px;
+            position: relative;
+            z-index: 1;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.315);*/
+            border-color: white;
+            border-radius: 20px;
+            text-align: center;
+            transition: all .5s ease-in-out;
+        }
+        .bf1{
+            height:60px;
+            width:10%;
+            position: relative;
+            z-index: 1;
+            font-size:2rem;
+            background-color: rgb(255, 217, 0);
+            margin-top: 1%;
+            border-color: gold;
+            /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.315);*/
+            letter-spacing: 2px;
+            border-radius: 50px;
+            transition: all .5s ease-in-out ;
+        }
+        .bf1:hover{
+            filter: brightness(1.2);
+            letter-spacing: 3px;
+            cursor: pointer;
+        }
+        .inp:hover{
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.249);
+        }
+        .p3{
+            font-family: Arial, Helvetica, sans-serif;
+            font-variant: small-caps;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 1px;
+            color:black;
+            font-size: 15px;
+            font-weight: 600;
+            display: inline-block;
+            text-decoration: underline;
+        }
+        .p3:hover{
+            color:rgb(183, 183, 183);
+            cursor: pointer;
+        }
+        }
+    </style>
+    <body>
+        <!-- Menu --> 
+        <header class="head">
+            <p class="upro"></p>
+            <p style="text-align: center;"><a href="./index.html">
+                <img src="logob.png" onmouseover="this.src='logoc2.png'" onmouseout="this.src='logob.png'" alt="Logo" class="logo">
+            </a></p>    
+            <a href="./index.html" style="text-decoration: none; color:black"><h1 class="mainname">Swidor</h1></a>
+            <a href="./newsletter.html" style="text-decoration: none; color:black"><h1 class="nl1"></h1></a>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./rprojects.html">Projects</a>
+                        <a href="./rnews.html">News</a>
+                        <a href="./aboutus.html">About us</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="head2">
+            <p style="text-align: center;"><a href="./index.html" style="text-decoration: none;">
+                <img src="logob.png" onmouseover="this.src='logoc2.png'" onmouseout="this.src='logob.png'" alt="Logo" class="logo2" style="margin-top: 0%;">
+                </a></p>
+                <!--<hr width="101%" color="black" align="center" size="5px" style="margin-top: 5%; position: fixed; top:0; margin-left:-1%;">-->
+                <a href="./rprojects.html" style="text-decoration: none;"><h1 class="hlm" style="margin-left: 64.5%; margin-right: 30%;">Projects</h1></a>
+                <a href="./rnews.html" style="text-decoration: none;"><h1 class="hlm" style="margin-left: 76.2%;margin-right: 10%;">News</h1></a>
+                <a href="./raboutus.html" style="text-decoration: none;"><h1 class="hlm" style="margin-left: 85%;margin-right: 5%;text-align: center;">About us</h1></a>
+                <a href="./index.html" style="text-decoration: none;"><h1 class="mtitle">SWIDOR</h1></a>
+                <a href="./newsletter.html" style="text-decoration: none;"><h4 class="hlm2">Subscribe to our newsletter here</h4></a>
+        </section>
+
+        <main>
+            <section class="subs">
+                <p class="p1">Subscription</p>
+                <p class="p2">I want to Subscribe</p>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="bde0cade-99cf-458a-b12b-5a8f18beff48">
+                    <input type = "email"  name="Email" placeholder="Email"class="inp" required><br>
+                    <button type="submit" class="bf1" alt="">Sign up</button><br>
+                    <input type="message" name="Require" style="z-index: 1; position: relative; display: none;" value="Subscribe">
+                </form>
+                <p class="p3" onclick="window.location.href='./unsub.html'">Unsubscribe</p>
+            </section>
+        </main>
+        
+    </body>
+</html>
